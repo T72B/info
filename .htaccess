@@ -1,0 +1,29 @@
+# Do not remove this line, otherwise mod_rewrite rules will stop working
+RewriteBase /
+
+RewriteEngine on
+
+ErrorDocument 403 /engine/scripts/errormess/403.php
+ErrorDocument 404 /engine/scripts/errormess/404.php
+
+Options All -Indexes
+
+RewriteRule ^index(.*)$ index.php [L]
+RewriteRule ^lang/ru/index(.*)$ lang/ru/index.php [L]
+RewriteRule ^lang/ru/belarus(.*)$ lang/ru/belarus.php [L]
+RewriteRule ^lang/ru/russia(.*)$ lang/ru/russia.php [L]
+RewriteRule ^lang/ru/litva(.*)$ lang/ru/litva.php [L]
+RewriteRule ^lang/ru/latvia(.*)$ lang/ru/latvia.php [L]
+RewriteRule ^lang/ru/poland(.*)$ lang/ru/poland.php [L]
+RewriteRule ^lang/ru/ukraine(.*)$ lang/ru/ukraine.php [L]
+
+RewriteRule ^lang/en/index(.*)$ lang/en/index.php [L]
+RewriteRule ^lang/en/belarus(.*)$ lang/en/belarus.php [L]
+RewriteRule ^lang/en/russia(.*)$ lang/en/russia.php [L]
+RewriteRule ^lang/en/litva(.*)$ lang/en/litva.php [L]
+RewriteRule ^lang/en/latvia(.*)$ lang/en/latvia.php [L]
+RewriteRule ^lang/en/poland(.*)$ lang/en/poland.php [L]
+RewriteRule ^lang/en/ukraine(.*)$ lang/en/ukraine.php [L]
+
+RewriteRule ^(.*).css$ - [L,QSA]
+
